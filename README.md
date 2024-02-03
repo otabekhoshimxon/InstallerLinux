@@ -1,4 +1,4 @@
-# **Install most used application on Linux OS**
+# **Install most used applications on Linux OS**
 
 ## Google chrome  
 ```shell
