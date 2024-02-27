@@ -19,4 +19,9 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/jetbrains-toolbox.sh | bash
 ```
 
+## Post Gist
+```shell
+curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/postgis3-p15-latest.sh | bash
+```
+
 
