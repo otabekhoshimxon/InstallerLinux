@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fd9d04f-1b05-440d-ab79-69cb1ba5eef2" name="Changes" comment="added postgis" />
+    <list default="true" id="8fd9d04f-1b05-440d-ab79-69cb1ba5eef2" name="Changes" comment="added postgis">
+      <change afterPath="$PROJECT_DIR$/postgis3-p12-latest.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgis3-p15-latest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/postgis3-p15-latest.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +17,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="914c9a17-85e1-4fc7-838c-f5d1454f9de2" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="1zjfyo9t" />
@@ -77,7 +85,7 @@
       <workItem from="1706869345160" duration="762000" />
       <workItem from="1706874519377" duration="1335000" />
       <workItem from="1706933640013" duration="3662000" />
-      <workItem from="1709030541860" duration="970000" />
+      <workItem from="1709030541860" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -127,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709031376567</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added postgis">
+      <option name="closed" value="true" />
+      <created>1709031564607</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709031564607</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
