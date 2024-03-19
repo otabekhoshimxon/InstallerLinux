@@ -111,4 +111,25 @@ sudo systemctl status postgresql
 sudo -u postgres psql -c "SELECT version();"
 echo -e "${GREEN}Postgres latest installed ${NC}"
 
+echo -e "${RED}Docker  installing${NC}"
+sudo apt update && sudo apt dist-upgrade -y
+sudo apt install docker.io
+sudo chmod 777 /var/run/docker.sock
+echo -e "${GREEN}Docker  installed ${NC}"
+
+echo -e "${RED}Redis  installing${NC}"
+sudo apt install redis
+echo -e "${GREEN}Redis  installed ${NC}"
+
 echo -e "${YELLOW}SUCCESSFULLY ALL INSTALLED${NC}"
+echo -e "${GREEN}Google installed ${NC}"
+echo -e "${GREEN}JetBrains Toolbox installed ${NC}"
+echo -e "${GREEN}Telegram installed ${NC}"
+echo -e "${GREEN}Postgres 15 installed${NC}"
+echo -e "${GREEN}Postgres latest installed ${NC}"
+echo -e "${GREEN}Docker  installed ${NC}"
+echo -e "${GREEN}Redis  installed ${NC}"
+
+
+
+
