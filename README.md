@@ -25,3 +25,9 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 ```
 
 
+## Install all packages
+```shell
+curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/all.sh | bash
+```
+
+
