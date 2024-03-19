@@ -57,34 +57,7 @@ fi
 echo -e "${GREEN}JetBrains Toolbox installed ${NC}"
 
 
-echo -e "${RED}Telegram installing${NC}"
 
-set -o errexit
-set -o pipefail
-shopt -s nullglob
-
-INSTALL_PATH="$HOME/Telegram"
-TEMP_PATH="$HOME/.tmp"
-
-sudo apt-get install xz-utils
-
-# Installing the application
-rm -Rf $INSTALL_PATH
-rm -Rf $TEMP_PATH
-mkdir -p $TEMP_PATH
-wget -O - "https://tdesktop.com/linux" | tar -xpJf - -C $TEMP_PATH
-mv $TEMP_PATH/Telegram $INSTALL_PATH
-rm -Rf $TEMP_PATH
-
-nohup $INSTALL_PATH/Telegram > /dev/null 2>&1 &
-
-exo-desktop-item-edit --create-new \
---type Application \
---name Telegram \
---command "$INSTALL_PATH/Telegram -- %u" \
---icon telegram \
-$HOME/Desktop/
-echo -e "${GREEN}Telegram installed ${NC}"
 echo -e "${RED}Postgres 15 installing${NC}"
 sudo apt update
 sudo apt -y upgrade
