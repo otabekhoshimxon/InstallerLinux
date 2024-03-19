@@ -109,6 +109,7 @@ sudo systemctl enable postgresql
 sudo systemctl start postgresql
 sudo systemctl status postgresql
 sudo -u postgres psql -c "SELECT version();"
+sudo -u postgres psql -c "ALTER USER 'postgres' PASSWORD 'otabek';"
 echo -e "${GREEN}Postgres latest installed ${NC}"
 
 echo -e "${RED}Docker  installing${NC}"
