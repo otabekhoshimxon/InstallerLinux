@@ -93,6 +93,7 @@ echo -e "${GREEN}Docker  installed ${NC}"
 
 echo -e "${RED}Redis  installing${NC}"
 sudo apt install redis
+redis-server --daemonize yes
 echo -e "${GREEN}Redis  installed ${NC}"
 
 echo -e "${YELLOW}SUCCESSFULLY ALL INSTALLED${NC}"
