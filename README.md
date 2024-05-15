@@ -4,6 +4,11 @@
 ```shell
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/google-chrome.sh | bash
 ```
+
+## Bluetooth
+```shell
+curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/bluetooth.sh | bash
+```
 ## Telegram
 ```shell
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/telegram.sh | bash
