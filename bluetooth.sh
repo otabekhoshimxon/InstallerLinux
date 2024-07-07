@@ -36,14 +36,11 @@ fi
     echo
     read -t 2
     echo
-    sudo apt-get install bluetooth
-    echo
-    echo -n -e "unblocking bluetooth using \e[101m"Rfkill"\e[0m" unblock all"\e[0m"
-    echo
-    read -t 2
-    echo
-    sudo rfkill unblock all
-    sudo /etc/init.d/bluetooth start
+sudo apt install bluetooth bluez bluez-tools rfkill
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth.service
+
+
     echo
     echo -n -e "\e[31m"!! "\e[32m"You re good to "\e[34m \e[5m"Go "\e[25m \e[31m"!! "\e[0m"
     echo
