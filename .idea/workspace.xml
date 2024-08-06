@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fd9d04f-1b05-440d-ab79-69cb1ba5eef2" name="Changes" comment="added all">
+      <change afterPath="$PROJECT_DIR$/snapd.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/all.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +72,14 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,6 +94,7 @@
       <workItem from="1709030541860" duration="3150000" />
       <workItem from="1709091370311" duration="72000" />
       <workItem from="1710827692055" duration="2771000" />
+      <workItem from="1722918707862" duration="1477000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
