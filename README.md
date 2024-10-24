@@ -5,6 +5,13 @@
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/google-chrome.sh | bash
 ```
 
+## Pomodoro  
+```shell
+sudo apt-get install gnome-shell-pomodoro
+
+```
+
+
 ## Bluetooth
 ```shell
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/bluetooth.sh | bash
