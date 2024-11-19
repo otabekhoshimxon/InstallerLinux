@@ -43,3 +43,39 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 ```
 
 
+
+
+
+
+# Install wine in linux
+
+### Type in your terminal
+
+```
+sudo apt-get install wine
+```
+
+```
+sudo apt-get install winetricks
+```
+
+```
+sudo apt-get install playonlinux
+```
+
+```
+sudo dpkg --add-architecture i386
+```
+
+```
+sudo apt-get update
+```
+
+### Finally 
+```
+sudo apt-get install wine-bin:i386
+```
+
+### Enjoy!
+
+
