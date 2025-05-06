@@ -1,26 +1,34 @@
 #!/bin/bash
 
-# Update the system and install required dependencies
+# Update system and install necessary dependencies
 echo "Updating system and installing dependencies..."
-sudo apt update && sudo apt install -y wget libgconf-2-4
+sudo apt update
+sudo apt install -y wget libgconf-2-4
 
-# Download Postman from the official source (check for the latest version URL)
+# Download the latest Postman .tar.gz file from the official repository
 echo "Downloading Postman..."
-wget https://dl.pstmn.io/download/latest/linux -O postman.tar.gz
+wget -q https://dl.pstmn.io/download/latest/linux -O /tmp/postman.tar.gz
 
-# Extract the downloaded tarball
+# Check if the download was successful
+if [ $? -eq 0 ]; then
+    echo "Postman downloaded successfully."
+else
+    echo "Error downloading Postman. Exiting script."
+    exit 1
+fi
+
+# Extract the downloaded file
 echo "Extracting Postman..."
-tar -xvzf postman.tar.gz
+tar -xzf /tmp/postman.tar.gz -C /opt
 
-# Move Postman to /opt directory
-echo "Moving Postman to /opt..."
-sudo mv Postman /opt/Postman
+# Remove the downloaded tar.gz file
+rm /tmp/postman.tar.gz
 
-# Create a symlink to make it easier to run Postman from the terminal
+# Create a symlink for Postman to run from the terminal
 echo "Creating symlink for Postman..."
 sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
-# Create a desktop shortcut (optional)
+# Optionally, create a desktop shortcut for Postman
 echo "Creating desktop shortcut..."
 sudo bash -c 'cat > /usr/share/applications/postman.desktop <<EOF
 [Desktop Entry]
@@ -32,9 +40,5 @@ Type=Application
 Categories=Development;
 EOF'
 
-# Clean up downloaded tarball
-echo "Cleaning up..."
-rm postman.tar.gz
-
-# Inform the user
-echo "Postman installation is complete! You can now launch it by typing 'postman' in the terminal."
+# Final message
+echo "Postman installation is complete! You can launch Postman by typing 'postman' in the terminal."
