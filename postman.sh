@@ -5,9 +5,21 @@ echo "Updating system and installing dependencies..."
 sudo apt update
 sudo apt install -y wget libgconf-2-4
 
-# Download the latest Postman .tar.gz file from the official repository
+# URL to download Postman
+URL="https://dl.pstmn.io/download/latest/linux"
+
+# Temporary file path for the download
+TEMP_FILE="/tmp/postman.tar.gz"
+
+# Download the latest Postman .tar.gz file with a progress bar
 echo "Downloading Postman..."
-wget -q https://dl.pstmn.io/download/latest/linux -O /tmp/postman.tar.gz
+
+wget --progress=bar:force:noscroll $URL -O $TEMP_FILE 2>&1 | \
+    grep --line-buffered "%" | \
+    sed -u -r 's/.* ([0-9]+)%.* ([0-9]+\.[0-9]+[MG]) .*/\1%\ \2 MB/' | \
+    while read line; do
+        echo "$line"
+    done
 
 # Check if the download was successful
 if [ $? -eq 0 ]; then
@@ -19,10 +31,10 @@ fi
 
 # Extract the downloaded file
 echo "Extracting Postman..."
-tar -xzf /tmp/postman.tar.gz -C /opt
+tar -xzf $TEMP_FILE -C /opt
 
 # Remove the downloaded tar.gz file
-rm /tmp/postman.tar.gz
+rm $TEMP_FILE
 
 # Create a symlink for Postman to run from the terminal
 echo "Creating symlink for Postman..."
