@@ -41,6 +41,10 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 ```shell
 curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/all.sh | bash
 ```
+## Install Redis
+```shell
+   curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/redis.sh | bash
+```
 
 
 
