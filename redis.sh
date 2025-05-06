@@ -60,7 +60,7 @@ sudo systemctl start redis
 # 8. Show service status
 echo ">>> Redis service status:"
 sudo systemctl status redis --no-pager
-
+sudo redis-server --daemonize yes
 # 9. Test connection
 echo ">>> Testing Redis connection..."
 redis-cli ping
