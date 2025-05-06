@@ -51,6 +51,12 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 ```
 
 
+## Install Docker-Compose
+```shell
+   curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/docker-compose.sh | bash
+```
+
+
 
 
 
