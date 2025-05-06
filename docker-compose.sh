@@ -1,32 +1,45 @@
 #!/bin/bash
 
-# Must be run as root or with sudo
+# Docker Compose install script for Linux (Kali)
+
+# Step 1: Check and become root if not already
 if [[ $EUID -ne 0 ]]; then
-  echo "Please run as root (use sudo)"
-  exit 1
+  echo "⚠️  This script must be run as root. Re-running with sudo..."
+  exec sudo "$0" "$@"
 fi
 
-echo "Fetching latest Docker Compose version..."
+# Step 2: Get latest version number from GitHub
+echo "📦 Fetching latest Docker Compose version..."
 VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K[^"]+')
 
-if [ -z "$VERSION" ]; then
-  echo "❌ Failed to retrieve latest Docker Compose version."
+if [[ -z "$VERSION" ]]; then
+  echo "❌ Could not retrieve the latest version from GitHub."
   exit 1
 fi
 
-echo "Latest version is: $VERSION"
-DEST=/usr/local/bin/docker-compose
+echo "🔢 Latest version is $VERSION"
 
-echo "📦 Downloading Docker Compose $VERSION..."
+# Step 3: Download the binary to /usr/local/bin
+DEST=/usr/local/bin/docker-compose
+echo "⬇️  Downloading Docker Compose binary to $DEST..."
+
 curl -L "https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o $DEST
 
-if [ $? -ne 0 ]; then
-  echo "❌ Download failed. The URL may not exist."
+if [[ $? -ne 0 ]]; then
+  echo "❌ Download failed."
   exit 1
 fi
 
-echo "🔧 Making it executable..."
+# Step 4: Make it executable
 chmod +x $DEST
 
-echo "✅ Installed Docker Compose version:"
+# Step 5: Verify installation
+echo "✅ Verifying installation..."
 docker-compose --version
+
+# Step 6: (Optional) Create symlink for convenience if needed
+if [[ ! -f /usr/bin/docker-compose ]]; then
+  ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+fi
+
+echo "🎉 Docker Compose $VERSION has been successfully installed!"
