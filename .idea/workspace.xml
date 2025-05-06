@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fd9d04f-1b05-440d-ab79-69cb1ba5eef2" name="Changes" comment="added all">
-      <change beforePath="$PROJECT_DIR$/postman.sh" beforeDir="false" afterPath="$PROJECT_DIR$/postman.sh" afterDir="false" />
-    </list>
+    <list default="true" id="8fd9d04f-1b05-440d-ab79-69cb1ba5eef2" name="Changes" comment="added all" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +94,7 @@
       <workItem from="1722918707862" duration="1477000" />
       <workItem from="1728576373116" duration="392000" />
       <workItem from="1746559259951" duration="678000" />
-      <workItem from="1746560012043" duration="322000" />
+      <workItem from="1746560012043" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -250,7 +248,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746560333047</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added all">
+      <option name="closed" value="true" />
+      <created>1746560442321</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746560442321</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added all">
+      <option name="closed" value="true" />
+      <created>1746560527493</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746560527493</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
