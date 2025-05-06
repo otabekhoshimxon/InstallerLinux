@@ -2,13 +2,13 @@
 
 set -e
 
-echo ">>> Redis o'rnatilmoqda..."
+echo ">>> Installing Redis from source..."
 
-# 1. Zarur paketlarni o'rnatish
+# 1. Install required packages
 sudo apt update
 sudo apt install build-essential tcl curl -y
 
-# 2. Redis manba kodini yuklab olish
+# 2. Download and build Redis
 cd /tmp
 curl -O http://download.redis.io/redis-stable.tar.gz
 tar xzvf redis-stable.tar.gz
@@ -16,22 +16,25 @@ cd redis-stable
 make
 sudo make install
 
-# 3. Konfiguratsiya faylini ko'chirish
+# 3. Copy default configuration
 sudo mkdir -p /etc/redis
 sudo cp redis.conf /etc/redis/redis.conf
 
-# 4. redis.conf faylini sozlash
+# 4. Update configuration
+echo ">>> Configuring Redis..."
 sudo sed -i 's/^supervised .*/supervised systemd/' /etc/redis/redis.conf
 sudo sed -i 's/^daemonize no/daemonize yes/' /etc/redis/redis.conf
 sudo sed -i 's|^dir .*|dir /var/lib/redis|' /etc/redis/redis.conf
 
-# 5. Redis uchun user va kataloglar
+# 5. Create Redis user and directory
+echo ">>> Creating Redis user and data directory..."
 sudo adduser --system --group --no-create-home redis || true
 sudo mkdir -p /var/lib/redis
 sudo chown redis:redis /var/lib/redis
 sudo chmod 770 /var/lib/redis
 
-# 6. systemd service faylini yaratish
+# 6. Create systemd service file
+echo ">>> Creating systemd service file for Redis..."
 sudo bash -c 'cat <<EOF > /etc/systemd/system/redis.service
 [Unit]
 Description=Redis In-Memory Data Store
@@ -48,15 +51,16 @@ Restart=always
 WantedBy=multi-user.target
 EOF'
 
-# 7. Xizmatni yoqish va ishga tushirish
+# 7. Reload systemd and start Redis
+echo ">>> Enabling and starting Redis service..."
 sudo systemctl daemon-reload
 sudo systemctl enable redis
 sudo systemctl start redis
 
-# 8. Holatini ko'rsatish
-echo ">>> Redis holati:"
+# 8. Show service status
+echo ">>> Redis service status:"
 sudo systemctl status redis --no-pager
 
-# 9. Test
-echo ">>> Redis test: "
+# 9. Test connection
+echo ">>> Testing Redis connection..."
 redis-cli ping
