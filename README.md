@@ -45,6 +45,10 @@ curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/mast
 ```shell
    curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/redis.sh | bash
 ```
+## Install Postman
+```shell
+   curl -fsSL https://raw.githubusercontent.com/otabekhoshimxon/InstallerLinux/master/postman.sh | bash
+```
 
 
 
